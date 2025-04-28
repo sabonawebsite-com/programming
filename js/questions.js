@@ -522,8 +522,345 @@ const questions = [
         question: "Which of the following is NOT a characteristic of a binary search tree?",
         options: ["Left subtree contains only nodes with keys less than the node's key", "Right subtree contains only nodes with keys greater than the node's key", "Both left and right subtrees are binary search trees", "The height of the tree is always balanced"],
         answer: "The height of the tree is always balanced"
-    }
-  ]
+    },
+
+      {
+        question: "What is the time complexity of accessing an element in an array?",
+        options: ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+        answer: "A"
+      },
+      {
+        question: "In a linked list, insertion at the beginning takes:",
+        options: ["O(n)", "O(1)", "O(log n)", "O(n log n)"],
+        answer: "B"
+      },
+      {
+        question: "Which data structure uses LIFO order?",
+        options: ["Queue", "Stack", "Array", "Tree"],
+        answer: "B"
+      },
+      {
+        question: "Which of the following is not a tree traversal method?",
+        options: ["Preorder", "Postorder", "Reverseorder", "Inorder"],
+        answer: "C"
+      },
+      {
+        question: "Which traversal technique uses a queue internally?",
+        options: ["Preorder", "Postorder", "BFS", "DFS"],
+        answer: "C"
+      },
+      {
+        question: "What is the space complexity of an adjacency matrix for a graph with V vertices?",
+        options: ["O(V)", "O(V+E)", "O(V²)", "O(E²)"],
+        answer: "C"
+      },
+      {
+        question: "Which data structure is used to implement recursion?",
+        options: ["Queue", "Stack", "Tree", "Heap"],
+        answer: "B"
+      },
+      {
+        question: "In a min-heap, the root element is:",
+        options: ["Maximum", "Minimum", "Average", "None"],
+        answer: "B"
+      },
+      {
+        question: "Which sorting algorithm has the best average case time complexity among these?",
+        options: ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"],
+        answer: "C"
+      },
+      {
+        question: "In binary search, what is the time complexity in the worst case?",
+        options: ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+        answer: "C"
+      },
+      {
+        question: "A full binary tree with 3 levels has how many nodes?",
+        options: ["6", "7", "8", "9"],
+        answer: "B"
+      },
+      {
+        question: "In hashing, which technique solves collisions by linking elements?",
+        options: ["Open addressing", "Chaining", "Probing", "Double hashing"],
+        answer: "B"
+      },
+      {
+        question: "Which operation is the fastest on a hash table?",
+        options: ["Search", "Sort", "Traverse", "Insertion"],
+        answer: "A"
+      },
+      {
+        question: "Which graph traversal guarantees the shortest path first?",
+        options: ["DFS", "BFS", "Dijkstra’s algorithm", "A* Search"],
+        answer: "B"
+      },
+      {
+        question: "How many children does a binary tree node have at most?",
+        options: ["1", "2", "3", "4"],
+        answer: "B"
+      },
+      {
+        question: "Which one is a non-linear data structure?",
+        options: ["Stack", "Queue", "Linked List", "Tree"],
+        answer: "D"
+      },
+      {
+        question: "Which one is the fastest sorting algorithm for small datasets?",
+        options: ["Quick Sort", "Merge Sort", "Insertion Sort", "Heap Sort"],
+        answer: "C"
+      },
+      {
+        question: "Circular Queue helps overcome which limitation of a simple queue?",
+        options: ["Underflow", "Overflow", "Wasting space", "Recursion"],
+        answer: "C"
+      },
+      {
+        question: "Which algorithm is used to find minimum spanning tree?",
+        options: ["Dijkstra", "Kruskal", "Floyd Warshall", "Bellman Ford"],
+        answer: "B"
+      },
+      {
+        question: "What is the main advantage of adjacency list over adjacency matrix?",
+        options: ["Less memory usage", "Faster access time", "Easier to implement", "Suitable for dense graphs"],
+        answer: "A"
+      }
+,
+    
+    
+
+      {
+        question: "What is the worst-case time complexity of Quick Sort?",
+        options: ["A) O(n log n)", "B) O(n²)", "C) O(log n)", "D) O(n)"],
+        answer: "B"
+      },
+      {
+        question: "Which of the following sorting algorithms is stable?",
+        options: ["A) Heap Sort", "B) Merge Sort", "C) Quick Sort", "D) Selection Sort"],
+        answer: "B"
+      },
+      {
+        question: "Which technique does Merge Sort use?",
+        options: ["A) Greedy", "B) Divide and Conquer", "C) Backtracking", "D) Dynamic Programming"],
+        answer: "B"
+      },
+      {
+        question: "Which search technique can only be used on sorted arrays?",
+        options: ["A) Linear Search", "B) Binary Search", "C) Depth-First Search", "D) Breadth-First Search"],
+        answer: "B"
+      },
+      {
+        question: "Dijkstra's algorithm is used for:",
+        options: ["A) Finding Minimum Spanning Tree", "B) Finding Shortest Path", "C) Topological Sort", "D) Depth-First Search"],
+        answer: "B"
+      },
+      {
+        question: "Which method is used in dynamic programming?",
+        options: ["A) Divide and conquer", "B) Memoization", "C) Greedy choice", "D) Recursion without memory"],
+        answer: "B"
+      },
+      {
+        question: "In BFS, the data structure used is:",
+        options: ["A) Stack", "B) Queue", "C) Tree", "D) Linked List"],
+        answer: "B"
+      },
+      {
+        question: "In backtracking, when a wrong choice is made, we:",
+        options: ["A) Continue", "B) Back up and try again", "C) Stop the program", "D) Restart from beginning"],
+        answer: "B"
+      },
+      {
+        question: "In Kruskal’s Algorithm, what is the approach used?",
+        options: ["A) Dynamic Programming", "B) Greedy", "C) Divide and Conquer", "D) Recursion"],
+        answer: "B"
+      },
+      {
+        question: "The time complexity of BFS is:",
+        options: ["A) O(V+E)", "B) O(V²)", "C) O(E²)", "D) O(log V)"],
+        answer: "A"
+      },
+      {
+        question: "What is the recurrence relation for Merge Sort?",
+        options: ["A) T(n) = 2T(n/2) + n", "B) T(n) = T(n-1) + O(n)", "C) T(n) = 2T(n) + n", "D) T(n) = T(n/2) + O(1)"],
+        answer: "A"
+      },
+      {
+        question: "Which sorting algorithm is best suited for linked lists?",
+        options: ["A) Bubble Sort", "B) Merge Sort", "C) Insertion Sort", "D) Selection Sort"],
+        answer: "B"
+      },
+      {
+        question: "Which algorithm is used to detect cycles in a graph?",
+        options: ["A) Dijkstra's Algorithm", "B) DFS", "C) BFS", "D) Prim's Algorithm"],
+        answer: "B"
+      },
+      {
+        question: "NP-complete problems are:",
+        options: ["A) Easy to solve", "B) Impossible to solve", "C) Hard to solve, easy to verify", "D) None"],
+        answer: "C"
+      },
+      {
+        question: "Which algorithm is best for finding minimum spanning tree?",
+        options: ["A) Dijkstra's", "B) Kruskal’s", "C) Floyd-Warshall", "D) Bellman-Ford"],
+        answer: "B"
+      },
+      {
+        question: "Dynamic Programming is ideal when problems have:",
+        options: ["A) No overlapping subproblems", "B) Overlapping subproblems", "C) Independent subproblems", "D) Exponential complexity only"],
+        answer: "B"
+      },
+      {
+        question: "The Best Case time complexity of Quick Sort is:",
+        options: ["A) O(n²)", "B) O(n log n)", "C) O(log n)", "D) O(n)"],
+        answer: "B"
+      },
+      {
+        question: "Greedy algorithms always provide:",
+        options: ["A) Optimal solution", "B) Suboptimal solution", "C) Either optimal or suboptimal", "D) No solution"],
+        answer: "C"
+      },
+      {
+        question: "Prim’s Algorithm uses which data structure efficiently?",
+        options: ["A) Stack", "B) Heap/Priority Queue", "C) Array", "D) Hash Map"],
+        answer: "B"
+      },
+      {
+        question: "Topological Sorting is possible in:",
+        options: ["A) Directed Cyclic Graph", "B) Undirected Graph", "C) Directed Acyclic Graph (DAG)", "D) Trees only"],
+        answer: "C"
+      },
+    
+      // Data Structures MCQs
+      {
+        question: "What is the time complexity of accessing an element in an array?",
+        options: ["A) O(1)", "B) O(n)", "C) O(log n)", "D) O(n log n)"],
+        answer: "A"
+      },
+      {
+        question: "In a linked list, insertion at the beginning takes:",
+        options: ["A) O(n)", "B) O(1)", "C) O(log n)", "D) O(n log n)"],
+        answer: "B"
+      },
+      {
+        question: "Which data structure uses LIFO order?",
+        options: ["A) Queue", "B) Stack", "C) Array", "D) Tree"],
+        answer: "B"
+      },
+      {
+        question: "Which of the following is not a tree traversal method?",
+        options: ["A) Preorder", "B) Postorder", "C) Reverseorder", "D) Inorder"],
+        answer: "C"
+      },
+      {
+        question: "Which traversal technique uses a queue internally?",
+        options: ["A) Preorder", "B) Postorder", "C) BFS", "D) DFS"],
+        answer: "C"
+      },
+      {
+        question: "What is the space complexity of an adjacency matrix for a graph with V vertices?",
+        options: ["A) O(V)", "B) O(V+E)", "C) O(V²)", "D) O(E²)"],
+        answer: "C"
+      },
+      {
+        question: "Which data structure is used to implement recursion?",
+        options: ["A) Queue", "B) Stack", "C) Tree", "D) Heap"],
+        answer: "B"
+      },
+      {
+        question: "In a min-heap, the root element is:",
+        options: ["A) Maximum", "B) Minimum", "C) Average", "D) None"],
+        answer: "B"
+      },
+      {
+        question: "Which sorting algorithm has the best average case time complexity among these?",
+        options: ["A) Bubble Sort", "B) Insertion Sort", "C) Merge Sort", "D) Selection Sort"],
+        answer: "C"
+      },
+      {
+        question: "In binary search, what is the time complexity in the worst case?",
+        options: ["A) O(1)", "B) O(n)", "C) O(log n)", "D) O(n log n)"],
+        answer: "C"
+      },
+      {
+        question: "A full binary tree with 3 levels has how many nodes?",
+        options: ["A) 6", "B) 7", "C) 8", "D) 9"],
+        answer: "B"
+      },
+      {
+        question: "In hashing, which technique solves collisions by linking elements?",
+        options: ["A) Open addressing", "B) Chaining", "C) Probing", "D) Double hashing"],
+        answer: "B"
+      },
+      {
+        question: "Which operation is the fastest on a hash table?",
+        options: ["A) Search", "B) Sort", "C) Traverse", "D) Insertion"],
+        answer: "A"
+      },
+      {
+        question: "Which graph traversal guarantees the shortest path first?",
+        options: ["A) DFS", "B) BFS", "C) Dijkstra’s algorithm", "D) A* Search"],
+        answer: "B"
+      },
+      {
+        question: "How many children does a binary tree node have at most?",
+        options: ["A) 1", "B) 2", "C) 3", "D) 4"],
+        answer: "B"
+      },
+      {
+        question: "Which one is a non-linear data structure?",
+        options: ["A) Stack", "B) Queue", "C) Linked List", "D) Tree"],
+        answer: "D"
+      },
+      {
+        question: "Which one is the fastest sorting algorithm for small datasets?",
+        options: ["A) Quick Sort", "B) Merge Sort", "C) Insertion Sort", "D) Heap Sort"],
+        answer: "C"
+      },
+      {
+        question: "Circular Queue helps overcome which limitation of a simple queue?",
+        options: ["A) Underflow", "B) Overflow", "C) Wasting space", "D) Recursion"],
+        answer: "C"
+      },
+      {
+        question: "Which algorithm is used to find minimum spanning tree?",
+        options: ["A) Dijkstra", "B) Kruskal", "C) Floyd Warshall", "D) Bellman Ford"],
+        answer: "B"
+      },
+      {
+        question: "What is the main advantage of adjacency list over adjacency matrix?",
+        options: ["A) Less memory usage", "B) Faster access time", "C) Easier to implement", "D) Suitable for dense graphs"],
+        answer: "A"
+      },
+   
+      {
+        question: "Which algorithm uses Divide and Conquer strategy?",
+        options: ["Prim’s Algorithm", "Merge Sort", "Dijkstra’s Algorithm", "Kruskal’s Algorithm"],
+        answer: "Merge Sort"
+      },
+      {
+        question: "Time complexity of Binary Search in the worst case is:",
+        options: ["O(n)", "O(log n)", "O(n²)", "O(1)"],
+        answer: "O(log n)"
+      },
+      {
+        question: "What is the average case complexity of Quick Sort?",
+        options: ["O(n²)", "O(n log n)", "O(log n)", "O(n)"],
+        answer: "O(n log n)"
+      },
+      {
+        question: "Which of the following algorithms is NOT comparison-based?",
+        options: ["Merge Sort", "Quick Sort", "Counting Sort", "Heap Sort"],
+        answer: "Counting Sort"
+      },
+      {
+        question: "In dynamic programming, we solve problems by:",
+        options: ["Solving once and using results again", "Randomly trying different approaches", "Using greedy strategies", "Brute force only"],
+        answer: "Solving once and using results again"
+      },
+      ]
+       
+    
+    
+  
   
   
  
