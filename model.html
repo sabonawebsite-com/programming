@@ -3,32 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exit Exam</title>
+    <title>Real Exit</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .controls-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
 
+        .controls-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #back-button {
+            display: flex /* Initially hidden */
+        }
+    </style>
 </head>
 <body>
     <div class="quiz-container">
-        <h1 id="timer"></h1>
-        <h1>Exit Exam Ethiopia✅</h1>
-      <h2>Test your knowledge</h2>
-        <img class="icon" src="pro.png" alt="">
-        <a href="compro.html">Computer programming</a>
-        <a href="model.html">Models</a>
-        <a class="gotoos" href="op.html">Go OS➡️</a>
-        <a class="website-route" href="web.html">WEB</a>
-        <a href="data.html">data commincutions</a>
-        <br>
-        <a href="algo.html">Algorithm</a>
-      
-
+        <h1 id="hom">Exit Exam Ethiopia✅</h1>
+        
+        <h2 id="gg">Test your knowledge</h2>
+        <img class="icon" src="FINF.png" alt="">
+        <a href="documents/data_comm.pdf" download="readsabo.pdf">Download by pdf</a>
+        
         <div id="question-container" class="question">
         </div>
         <div id="options-container" class="options-container">
         </div>
         <div class="controls-container">
-            <button id="back-button">⬅️</button>
-            <button id="next-button">➡️</button>
+            <button id="back-button">⬅️Back</button>
+            <button id="next-button">Next➡️</button>
         </div>
        
         <div id="results-container">
@@ -39,7 +48,7 @@
         <h3>2025 &copy; All Right reseved By Sabona Marara✅</h3>
     </div>
     
-    <script src="js/questions.js"></script>
+    <script src="model.js"></script>
     <script>
         const questionContainer = document.getElementById('question-container');
         const optionsContainer = document.getElementById('options-container');
@@ -153,34 +162,6 @@
 
         // Initial load
         loadQuestion();
-        var countDownDate = new Date("June 07, 2025 20:50:59").getTime();  
-
-        // Update the countdown every 1 second  
-        var x = setInterval(function() {  
-
-            // Get today's date and time  
-            var now = new Date().getTime();  
-
-            // Find the distance between now and the countdown date  
-            var distance = countDownDate - now;  
-
-            // Time calculations for days, hours, minutes, and seconds  
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));  
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));  
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));  
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);  
-
-            // Display the result in the element with id="timer"  
-            document.getElementById("timer").innerHTML = days + " days left: " + hours + "h: "  
-            + minutes + "m: " + seconds + "s ";  
-
-            // If the countdown is over, write some text   
-            if (distance < 0) {  
-                clearInterval(x);  
-                document.getElementById("timer").innerHTML = "EXPIRED";  
-                document.getElementById("timer").classList.add("expired");  
-            }  
-        }, 1000); 
     </script>
 </body>
 </html>
