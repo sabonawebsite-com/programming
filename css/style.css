@@ -118,11 +118,13 @@ a:hover {
   background-color: #fff;  
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
   transition: all 0.3s ease;  
+  color: #28a745;
 }  
 
 #timer:hover {  
   background-color: #e6f7ff;  
   transform: scale(1.05);  
+  color: #28a745;
 }  
 
 .expired {  
