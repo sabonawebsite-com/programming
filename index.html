@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exit Exam</title>
+    <title>Exit Exam</title>
     <link rel="stylesheet" href="css/style.css">
-<style>
-    .subject-dropdown {
-        margin-bottom: 15px;
-    }
+    <style>
+        .subject-dropdown {
+            margin-bottom: 15px;
+        }
 
-    .subject-dropdown label {
-        font-weight: bold;
-        margin-right: 10px;
-    }
+        .subject-dropdown label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
 
-    .subject-dropdown select {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-    }
-</style>
+        .subject-dropdown select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .expired {
+            color: red; /* Example styling for expired timer */
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div class="quiz-container">
@@ -90,6 +95,109 @@
         let currentQuestionIndex = 0;
         let score = 0;
         let answeredQuestions = []; // To store if a question has been answered
+        let questions = [ // Define your questions array here
+        {
+            question: "Which JavaScript method is used to add an event listener to an element?",
+            options: ["attachEvent()", "listenEvent()", "addEventListener()", "onEvent()"],
+            answer: "addEventListener()"
+          },
+          {
+            question: "What is exception handling in JavaScript?",
+            options: ["A way to style web pages", "A mechanism to deal with errors during program execution", "A method for defining functions", "A technique for optimizing code"],
+            answer: "A mechanism to deal with errors during program execution"
+          },
+          {
+            question: "Which JavaScript statement is used to handle exceptions?",
+            options: ["if...else", "for loop", "try...catch", "switch"],
+            answer: "try...catch"
+          },
+          {
+            question: "What is the JavaScript BOM (Browser Object Model)?",
+            options: ["A way to style web pages", "An interface for interacting with the browser window", "A method for defining HTML structure", "A server-side technology"],
+            answer: "An interface for interacting with the browser window"
+          },
+          {
+            question: "Which JavaScript object represents the browser's history?",
+            options: ["window", "document", "location", "history"],
+            answer: "history"
+          },
+          {
+            question: "What is the purpose of JavaScript cookies?",
+            options: ["Styling web pages", "Storing small amounts of data on the user's computer", "Defining HTML structure", "Handling server-side requests"],
+            answer: "Storing small amounts of data on the user's computer"
+          },
+          {
+            question: "What are PHP sessions used for?",
+            options: ["Storing data on the client-side", "Maintaining user state across multiple page requests", "Defining the layout of a web page", "Handling database queries"],
+            answer: "Maintaining user state across multiple page requests"
+          },
+          {
+            question: "Which PHP superglobal variable is used to access session data?",
+            options: ["$_COOKIE", "$_GET", "$_POST", "$_SESSION"],
+            answer: "$_SESSION"
+          },
+          {
+            question: "What is MySQL?",
+            options: ["A server-side scripting language", "A front-end framework", "A relational database management system", "A JavaScript library"],
+            answer: "A relational database management system"
+          },
+          {
+            question: "Which SQL command is used to insert new data into a database table?",
+            options: ["SELECT", "UPDATE", "DELETE", "INSERT"],
+            answer: "INSERT"
+          },
+          {
+            question: "In PHP, which function is used to connect to a MySQL database?",
+            options: ["connect_db()", "mysql_connect()", "mysqli_connect()", "db_connect()"],
+            answer: "mysqli_connect()"
+          },
+          {
+            question: "Which PHP function is used to execute a SQL query?",
+            options: ["execute_query()", "run_sql()", "mysqli_query()", "query()"],
+            answer: "mysqli_query()"
+          },
+          {
+            question: "What is the purpose of PHP file handling functions?",
+            options: ["To style web pages", "To read from and write to files on the server", "To define HTML structure", "To handle database connections"],
+            answer: "To read from and write to files on the server"
+          },
+          {
+            question: "Which PHP function is used to open a file?",
+            options: ["file_open()", "open_file()", "fopen()", "open()"],
+            answer: "fopen()"
+          },
+          {
+            question: "What is OOP in PHP?",
+            options: ["A way to style web pages", "Object-Oriented Programming", "A method for defining functions", "A technique for optimizing code"],
+            answer: "Object-Oriented Programming"
+          },
+          {
+            question: "In OOP, what is a class?",
+            options: ["An instance of an object", "A blueprint for creating objects", "A type of variable", "A way to define functions"],
+            answer: "A blueprint for creating objects"
+          },
+          {
+            question: "What is an object in OOP?",
+            options: ["A blueprint for creating classes", "An instance of a class", "A type of variable", "A way to define functions"],
+            answer: "An instance of a class"
+          },
+          {
+            question: "What is inheritance in OOP?",
+            options: ["The ability of a class to inherit properties and methods from another class", "The process of creating objects", "A way to define functions", "A technique for optimizing code"],
+            answer: "The ability of a class to inherit properties and methods from another class"
+          },
+          {
+            question: "Which HTTP method is commonly used to retrieve data from a server?",
+            options: ["POST", "PUT", "DELETE", "GET"],
+            answer: "GET"
+          },
+          {
+            question: "Which HTTP method is commonly used to submit data to a server?",
+            options: ["GET", "PUT", "DELETE", "POST"],
+            answer: "POST"
+          },
+            // Add more questions as needed
+        ];
 
         function loadQuestion() {
             const currentQuestion = questions[currentQuestionIndex];
@@ -192,6 +300,8 @@
 
         // Initial load
         loadQuestion();
+
+        // Timer functionality
         var countDownDate = new Date("June 07, 2025 20:50:59").getTime();
 
         // Update the countdown every 1 second
